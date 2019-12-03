@@ -12,8 +12,8 @@
 2. CD into a daily challenge folder and run the code with: `python <filename.py>`
 
 ## Challenges
-&#9745; [Day 1: The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1)
-&#9745; [Day 2: 1202 Program Alarm](https://adventofcode.com/2019/day/2)
+- &#9745; [Day 1: The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1)
+- &#9745; [Day 2: 1202 Program Alarm](https://adventofcode.com/2019/day/2)
 
 
 ## Author
