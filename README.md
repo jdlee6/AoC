@@ -8,13 +8,13 @@
 <li>Python 3.7+</li>
 
 ## Install
-1. Clone this repo: `git clone github.com/jdlee6/AoC.git`
+1. Clone this repo: `git clone https://github.com/jdlee6/advent-of-code.git`
 2. CD into a daily challenge folder and run the code with: `python <filename.py>`
 
 ## Challenges
 - &#9745; [Day 1: The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1)
 - &#9745; [Day 2: 1202 Program Alarm](https://adventofcode.com/2019/day/2)
-
+- &#9745; [Day 3: Crossed Wires](https://adventofcode.com/2019/day/3)
 
 ## Author
 

@@ -22,5 +22,3 @@ def main(arr):
     
 if __name__ == "__main__":
     print(main(arr))
-
-

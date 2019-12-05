@@ -1,16 +1,3 @@
-'''
-Approach:
-    map out every single coordinate and store them in a set for each directions
-
-    then find the intersection between each set
-
-'''
-
-# dir1 = ['R8', 'U5', 'L5','D3']
-# dir2 = ['U7', 'R6', 'D4', 'L4']
-# dir1 = ['R75','D30','R83','U83','L12','D49','R71','U7','L72']
-# dir2 = ['U62','R66','U55','R34','D71','R55','D58','R83']
-
 def read_file(f):
     with open(f, 'r') as f:
         lines = f.readlines()
@@ -73,4 +60,3 @@ if __name__ == "__main__":
 
     # print(find_coords(dir2))
     print(find_intersections(find_coords(read_file('./input.txt')[0]), find_coords(read_file('./input.txt')[1])))
-
