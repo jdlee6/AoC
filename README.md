@@ -15,6 +15,7 @@
 - &#9745; [Day 1: The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1)
 - &#9745; [Day 2: 1202 Program Alarm](https://adventofcode.com/2019/day/2)
 - &#9745; [Day 3: Crossed Wires](https://adventofcode.com/2019/day/3)
+- &#9745; [Day 4: Secure Container](https://adventofcode.com/2019/day/4)
 
 ## Author
 

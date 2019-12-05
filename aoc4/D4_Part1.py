@@ -1,4 +1,4 @@
-a, b = 265275, 781574
+a, b = 265275, 781584
 # a, b = 112, 222
 
 combos = [num for num in range(a, b)]
@@ -6,7 +6,7 @@ combos = [num for num in range(a, b)]
 def filter_combos(combos):
     ''' 
     1. find adjacent digits (2 or more)
-    2. find equal or increasing digits from L TO R
+    2. digits from L to R must be equal or increasing
     3. append to list and return len of list
     '''
     temp = []
