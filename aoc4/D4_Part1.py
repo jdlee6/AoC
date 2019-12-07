@@ -1,22 +1,40 @@
 a, b = 265275, 781584
 # a, b = 112, 222
-
 combos = [num for num in range(a, b)]
+temp = []
+
 
 def filter_combos(combos):
-    ''' 
-    1. find adjacent digits (2 or more)
-    2. digits from L to R must be equal or increasing
-    3. append to list and return len of list
-    '''
-    temp = []
     for num in combos:
-        if str(num)[0] == str(num)[1] or str(num)[1] == str(num)[2] or str(num)[2] == str(num)[3] or str(num)[3] == str(num)[4] or str(num)[4] == str(num)[5]:
-            if str(num)[1] >= str(num)[0] and str(num)[2] >= str(num)[1] and str(num)[3] >= str(num)[2] and str(num)[4] >= str(num)[3] and str(num)[5] >= str(num)[4]:
-                temp.append(num)
-
+        if conditionals(num):
+            temp.append(num)
     return len(temp)
 
 
+def conditionals(num):
+    '''
+    checks for double
+    then checks current digit > prev digit
+    if all pass, then increment
+    '''
+    str_num = str(num)
+    prevDigit = str_num[0]
+    double = False
+
+    for i in range(len(str_num)-1):
+        if str_num[i+1] == prevDigit:
+            double = True
+        elif str_num[i+1] < prevDigit:
+            return False
+        else:
+            prevDigit = str_num[i+1]
+
+    return double
+    
+
 if __name__ == "__main__":
     print(filter_combos(combos))
+    # print(conditionals(123456))
+    # print(conditionals(112234))
+    # print(conditionals(110012))
+    # print(conditionals(123789))

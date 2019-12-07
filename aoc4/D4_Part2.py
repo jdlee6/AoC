@@ -5,15 +5,16 @@ res = []
 
 def filter_combos(combos):
     for num in combos:
-        if str(num)[0] == str(num)[1] or str(num)[1] == str(num)[2] or str(num)[2] == str(num)[3] or str(num)[3] == str(num)[4] or str(num)[4] == str(num)[5]:
-            if str(num)[1] >= str(num)[0] and str(num)[2] >= str(num)[1] and str(num)[3] >= str(num)[2] and str(num)[4] >= str(num)[3] and str(num)[5] >= str(num)[4]:
-                filter_more(num)
+        if conditionals(num):
+            checkForPair(num)
 
+    return len(res)
+    
 
-def filter_more(num):
+def checkForPair(num):
     '''
     if digit count == 2
-    break
+    appends to results then break
     '''
     num = str(num)
     for digit in num:
@@ -24,61 +25,31 @@ def filter_more(num):
             break
 
 
-if __name__ == "__main__":
-    filter_combos(combos)
-    # filter_more(1122333)
-    # filter_more(112233)
-    # filter_more(111122)
-    # filter_more(123444)
-    print(len(res))
+def conditionals(num):
+    '''
+    checks for double
+    then checks current digit > prev digit
+    if all pass, then increment
+    '''
+    str_num = str(num)
+    prevDigit = str_num[0]
+    double = False
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-    # # find unique digits
-    # for d in str(num):
-    #     if d 
-
-
-    # iterate through each possible num
-    # need to filter again 
-    # stack
-    stack = []
-
-    for digit in str(num):
-        print(stack)
-        if digit not in stack:
-            stack.append(digit)
+    for i in range(len(str_num)-1):
+        if str_num[i+1] == prevDigit:
+            double = True
+        elif str_num[i+1] < prevDigit:
+            return False
         else:
-            stack.pop()
-    
-    print(stack)
-'''
+            prevDigit = str_num[i+1]
+
+    return double
+
+
+if __name__ == "__main__":
+    print(filter_combos(combos))
+    # checkForPair(1122333)
+    # checkForPair(112233)
+    # checkForPair(111122)
+    # checkForPair(123444)
+    # print(len(res))
